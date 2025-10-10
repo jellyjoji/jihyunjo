@@ -75,7 +75,7 @@ const translations = {
     "projects.dashboardDesc":
       "A statistical data dashboard providing table statistics generated from modules in a pipeline built using APIs.",
 
-    "projects.ux": "UX Design & Usability Insights",
+    "projects.ux": "UX Design: User Experience",
     "projects.uxDesc":
       "Provides problem and solution insights regarding usability testing and a co-purchasing system.",
 
@@ -103,6 +103,11 @@ const translations = {
     "contact.sendMessage": "Send a Message",
     "contact.name": "Name",
     "contact.message": "Message",
+    "contact.sent": "Message sent successfully!",
+    "contact.errorTitle": "Error",
+    "contact.successTitle": "Success",
+    "contact.configError":
+      "Email service is not configured. Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY.",
     "contact.send": "Send Message",
     "contact.sending": "Sending...",
 
@@ -194,6 +199,11 @@ const translations = {
     "contact.sendMessage": "메시지 보내기",
     "contact.name": "이름",
     "contact.message": "메시지",
+    "contact.sent": "메시지가 성공적으로 전송되었습니다!",
+    "contact.errorTitle": "오류",
+    "contact.successTitle": "성공",
+    "contact.configError":
+      "이메일 서비스가 구성되어 있지 않습니다. VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID 및 VITE_EMAILJS_PUBLIC_KEY를 설정하세요.",
     "contact.send": "메시지 보내기",
     "contact.sending": "전송 중...",
 

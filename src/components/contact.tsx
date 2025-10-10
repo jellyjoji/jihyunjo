@@ -6,31 +6,77 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { useLanguage } from "../contexts/language-context";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
+
+  type Form = { name: string; email: string; message: string };
+  const [formData, setFormData] = useState<Form>({
     name: "",
     email: "",
     message: "",
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
-    alert("Message sent successfully!");
+  const [isSending, setIsSending] = useState(false);
+  type AlertState = {
+    isOpen: boolean;
+    type: "success" | "error";
+    message: string;
   };
+
+  const [alertState, setAlertState] = useState<AlertState>({
+    isOpen: false,
+    type: "success",
+    message: "",
+  });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    const { name, value } = e.target;
+    setFormData((prev: Form) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // Read config from Vite env. If you deploy, set these env vars.
+    const serviceId = (import.meta as any).env?.VITE_EMAILJS_SERVICE_ID as
+      | string
+      | undefined;
+    const templateId = (import.meta as any).env?.VITE_EMAILJS_TEMPLATE_ID as
+      | string
+      | undefined;
+    const publicKey = (import.meta as any).env?.VITE_EMAILJS_PUBLIC_KEY as
+      | string
+      | undefined;
+
+    if (!serviceId || !templateId || !publicKey) {
+      alert(
+        "Email service is not configured. Please set up EmailJS configuration."
+      );
+      setIsSending(false);
+      return;
+    }
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      const msg =
+        (err && (err.text || err.message)) || String(err || "Unknown error");
+      alert(`Failed to send message: ${msg}`);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const contactInfo = [
@@ -106,6 +152,7 @@ export function Contact() {
               <CardTitle>{t("contact.sendMessage")}</CardTitle>
             </CardHeader>
             <CardContent>
+              {" "}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">{t("contact.name")}</Label>
@@ -145,9 +192,16 @@ export function Contact() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full">
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={isSending}
+                  aria-busy={isSending}
+                >
                   <Send className="w-4 h-4 mr-2" />
-                  {t("contact.send")}
+                  {isSending
+                    ? t("contact.sending") ?? "Sending..."
+                    : t("contact.send")}
                 </Button>
               </form>
             </CardContent>
