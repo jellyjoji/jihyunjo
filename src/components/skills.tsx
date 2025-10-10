@@ -1,5 +1,4 @@
 import React from "react";
-import { Code, Palette, Zap } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { useLanguage } from "../contexts/language-context";
 
@@ -9,7 +8,7 @@ export function Skills() {
   const skillCategories = [
     {
       title: t("skills.frontend"),
-      icon: Code,
+      emoji: "💻",
       skills: [
         "React.js",
         "Next.js",
@@ -21,17 +20,17 @@ export function Skills() {
     },
     {
       title: t("skills.backend"),
-      icon: Code,
+      emoji: "⚙️",
       skills: ["Node.js", "REST APIs", "SQL"],
     },
     {
       title: t("skills.tools"),
-      icon: Zap,
+      emoji: "🛠",
       skills: ["Git", "GitHub", "VS Code", "npm/yarn", "Webpack", "Vite"],
     },
     {
       title: t("skills.design"),
-      icon: Palette,
+      emoji: "🎨",
       skills: [
         "Figma",
         "UI/UX Design",
@@ -62,8 +61,8 @@ export function Skills() {
               className="bg-background rounded-lg p-6 border border-border hover:shadow-lg transition-shadow duration-300"
             >
               <div className="text-center mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <category.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-4xl">{category.emoji}</span>
                 </div>
                 <h3 className="font-medium">{category.title}</h3>
               </div>

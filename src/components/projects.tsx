@@ -19,7 +19,8 @@ export function Projects() {
     {
       title: t("projects.ecommerce"),
       description: t("projects.ecommerceDesc"),
-      image: "./src/assets/og.png",
+      image:
+        "https://github.com/jellyjoji/jihyunjo/blob/main/src/assets/og.png?raw=true",
       tags: ["Next.js", "Node.js", "SCSS"],
       liveUrl: "https://www.paysm.net",
       githubUrl: "https://github.com/jellyjoji/paysm.net",
