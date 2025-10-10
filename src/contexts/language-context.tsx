@@ -66,15 +66,18 @@ const translations = {
       "A showcase of my recent work, featuring full-stack applications and innovative solutions",
     "projects.liveDemo": "Live Demo",
     "projects.code": "Code",
+
     "projects.ecommerce": "E-Commerce Platform",
     "projects.ecommerceDesc":
       "A full-featured e-commerce platform built with Next.js, featuring user authentication, payment processing, and custom design.",
+
     "projects.dashboard": "Statistical Data Dashboard",
     "projects.dashboardDesc":
       "A statistical data dashboard providing table statistics generated from modules in a pipeline built using APIs.",
-    "projects.analytics": "Analytics Dashboard",
-    "projects.analyticsDesc":
-      "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
+
+    "projects.ux": "UX Design & Usability Insights",
+    "projects.uxDesc":
+      "Provides problem and solution insights regarding usability testing and a co-purchasing system.",
 
     // LinkedIn Section
     "linkedin.title": "Connect with Me",
