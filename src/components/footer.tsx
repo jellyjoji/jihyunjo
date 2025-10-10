@@ -1,14 +1,22 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
-import { useLanguage } from '../contexts/language-context';
+import React from "react";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useLanguage } from "../contexts/language-context";
 
 export function Footer() {
   const { t, language } = useLanguage();
-  
+
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/jellyjoji?tab=repositories', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/jellyjoji', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:joji.the.jungle@gmail.com', label: 'Email' }
+    {
+      icon: Github,
+      href: "https://github.com/jellyjoji?tab=repositories",
+      label: "GitHub",
+    },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/jellyjoji",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "mailto:joji.the.jungle@gmail.com", label: "Email" },
   ];
 
   return (
@@ -16,9 +24,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="font-medium mb-2">{language === 'ko' ? '조지현' : 'Jihyun Jo'}</h3>
+            <h3 className="font-medium mb-2">
+              {language === "ko" ? "조지현" : "Jihyun Jo"}
+            </h3>
             <p className="text-muted-foreground">
-              {language === 'ko' ? '프론트엔드 개발자 & UX/UI 디자이너' : 'Front-end Developer & UX/UI Designer'}
+              {language === "ko"
+                ? "프론트엔드 개발자 & UX/UI 디자이너"
+                : "Front-end Developer & UX/UI Designer"}
             </p>
           </div>
 
@@ -39,8 +51,8 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-muted-foreground flex items-center justify-center gap-1">
-            © 2025 {language === 'ko' ? '조지현' : 'Jihyun Jo'}. {t('footer.made')} <Heart className="w-4 h-4 text-red-500" /> {t('footer.using')}
+          <p className="text-muted-foreground">
+            © 2025 Jihyun Jo. All rights reserved.
           </p>
         </div>
       </div>
