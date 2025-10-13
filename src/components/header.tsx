@@ -1,32 +1,35 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
-import { ThemeToggle } from './theme-toggle';
-import { LanguageSelector } from './language-selector';
-import { useLanguage } from '../contexts/language-context';
+import React, { useState, useMemo } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
+import { ThemeToggle } from "./theme-toggle";
+import { LanguageSelector } from "./language-selector";
+import { useLanguage } from "../contexts/language-context";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, language } = useLanguage();
 
-  const navigation = [
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.skills'), href: '#skills' },
-    { name: t('nav.projects'), href: '#projects' },
-    { name: t('nav.linkedin'), href: '#linkedin' },
-    { name: t('nav.contact'), href: '#contact' },
-  ];
+  const navigation = useMemo(
+    () => [
+      { name: t("nav.about"), href: "#about" },
+      { name: t("nav.skills"), href: "#skills" },
+      { name: t("nav.projects"), href: "#projects" },
+      { name: t("nav.linkedin"), href: "#linkedin" },
+      { name: t("nav.contact"), href: "#contact" },
+    ],
+    [t, language]
+  );
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -34,11 +37,11 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <button 
+            <button
               onClick={scrollToTop}
               className="text-xl font-medium hover:text-muted-foreground transition-colors cursor-pointer"
             >
-              {language === 'ko' ? '조지현' : 'Jihyun Jo'}
+              {language === "ko" ? "조지현" : "Jihyun Jo"}
             </button>
           </div>
 
@@ -70,7 +73,11 @@ export function Header() {
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
