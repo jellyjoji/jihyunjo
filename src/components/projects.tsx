@@ -46,7 +46,8 @@ export function Projects() {
       // "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbM5PP9%2FbtrXnll55ih%2FAAAAAAAAAAAAAAAAAAAAAL3_RPXTlnxyuJ7nL3UmeaQmKQWU8fChTheBrJE36ii-%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1761922799%26allow_ip%3D%26allow_referer%3D%26signature%3DhZdghfM2%252Fiw8Jw06ld9Y5bc5jw0%253D",
       tags: ["React", "TypeScript", "D3.js", "Python", "FastAPI"],
       liveUrl:
-        "https://jellyjo.notion.site/Resume-ba42ce1b90f4489d9d25376ef1c846f1",
+        // "https://jellyjo.notion.site/Resume-ba42ce1b90f4489d9d25376ef1c846f1",
+        "https://jellyjo.notion.site/Portfolio_Jihyun-Jo-28b2643648e280af9d38cd77b0a70a0f",
       githubUrl: "https://github.com/jellyjoji/ready-act",
     },
   ];
