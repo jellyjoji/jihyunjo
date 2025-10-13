@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
 
 export type Language = "en" | "ko";
 
@@ -169,11 +175,11 @@ const translations = {
     "projects.ecommerce": "이커머스 플랫폼",
     "projects.ecommerceDesc":
       "React와 Node.js로 구축된 완전한 기능의 이커머�� 플랫폼. 사용자 인증, 결제 처리, 관리자 대시보드 포함.",
-    "projects.taskApp": "작업 관리 앱",
-    "projects.taskAppDesc":
+    "projects.dashboard": "작업 관리 앱",
+    "projects.dashboardDesc":
       "실시간 업데이트, 드래그 앤 드롭 기능, 팀 협업 기능을 갖춘 협업형 작업 관리 애플리케이션.",
-    "projects.analytics": "분석 대시보드",
-    "projects.analyticsDesc":
+    "projects.ux": "분석 대시보드",
+    "projects.uxDesc":
       "인터랙티브 차트, 실시간 데이터 시각화, 사용자 정의 가능한 보고 기능을 갖춘 포괄적인 분석 대시보드.",
 
     // LinkedIn Section
@@ -214,21 +220,47 @@ const translations = {
 };
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  // Initialize language from localStorage or default to 'en'
+  const [language, setInternalLanguage] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const savedLanguage = localStorage.getItem("language");
+      return savedLanguage === "en" || savedLanguage === "ko"
+        ? savedLanguage
+        : "en";
+    }
+    return "en";
+  });
+
+  // Memoize the translation function to prevent unnecessary rerenders
+  const translationMap = useMemo(() => {
+    return new Map(Object.entries(translations[language] || {}));
+  }, [language]);
+
+  const setLanguage = useCallback((newLanguage: Language) => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("language", newLanguage);
+    }
+    setInternalLanguage(newLanguage);
+  }, []);
 
   const t = useCallback(
-    (key: string): string => {
-      const translation = translations[language]?.[key];
-      if (translation !== undefined) {
-        return translation;
-      }
-      return key;
+    (key: string) => {
+      return translationMap.get(key) || key;
     },
-    [language]
+    [translationMap]
+  );
+
+  const contextValue = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      t,
+    }),
+    [language, setLanguage, t]
   );
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );
@@ -241,3 +273,6 @@ export function useLanguage() {
   }
   return context;
 }
+
+// Add empty export to ensure file is treated as a module
+export {};

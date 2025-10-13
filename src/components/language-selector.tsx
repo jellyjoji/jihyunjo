@@ -1,22 +1,22 @@
-import React from 'react';
-import { Globe } from 'lucide-react';
-import { Button } from './ui/button';
+import React from "react";
+import { Globe } from "lucide-react";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from './ui/dropdown-menu';
-import { useLanguage, Language } from '../contexts/language-context';
+} from "./ui/dropdown-menu";
+import { useLanguage, Language } from "../contexts/language-context";
 
 const languages: { code: Language; name: string; flag: string }[] = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ko', name: '한국어', flag: '🇰🇷' },
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "ko", name: "한국어", flag: "🇰🇷" },
 ];
 
 export function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
-  const currentLanguage = languages.find(lang => lang.code === language);
+  const currentLanguage = languages.find((lang) => lang.code === language);
 
   const handleLanguageChange = (langCode: Language) => {
     setLanguage(langCode);
@@ -35,8 +35,10 @@ export function LanguageSelector() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onSelect={() => handleLanguageChange(lang.code)}
-            className={`cursor-pointer ${language === lang.code ? 'bg-accent' : ''}`}
+            onClick={() => handleLanguageChange(lang.code)}
+            className={`cursor-pointer ${
+              language === lang.code ? "bg-accent" : ""
+            }`}
           >
             <span className="mr-2">{lang.flag}</span>
             <span>{lang.name}</span>
