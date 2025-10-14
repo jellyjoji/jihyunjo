@@ -37,7 +37,8 @@ export function Projects() {
     {
       title: t("projects.paysmApp"),
       description: t("projects.paysmAppDesc"),
-      image: "./src/assets/paysmApp.png",
+      image:
+        "https://github.com/jellyjoji/jihyunjo/blob/main/src/assets/paysmApp.png?raw=true",
       tags: [
         "Next.js",
         "JavaScript",
@@ -100,7 +101,8 @@ export function Projects() {
     {
       title: t("projects.homework"),
       description: t("projects.homeworkDesc"),
-      image: "./src/assets/homework.png",
+      image:
+        "https://github.com/jellyjoji/jihyunjo/blob/main/src/assets/homework.png?raw=true",
       tags: [
         "Figma",
         "UI/UX Design",
@@ -116,7 +118,8 @@ export function Projects() {
     {
       title: t("projects.healthcare"),
       description: t("projects.healthcareDesc"),
-      image: "./src/assets/healthcare.png",
+      image:
+        "https://github.com/jellyjoji/jihyunjo/blob/main/src/assets/healthcare.png?raw=true",
       tags: [
         "Figma",
         "UI/UX Design",
