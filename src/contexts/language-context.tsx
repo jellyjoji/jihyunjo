@@ -73,9 +73,13 @@ const translations = {
     "projects.liveDemo": "Live Demo",
     "projects.code": "Code",
 
-    "projects.ecommerce": "E-Commerce Platform",
-    "projects.ecommerceDesc":
-      "A full-featured e-commerce platform built with Next.js, featuring user authentication, payment processing, and custom design.",
+    "projects.paysm": "Payment Platform",
+    "projects.paysmDesc":
+      "A full-featured payment platform built with Next.js, featuring secure payment processing, user authentication, and a custom-designed interface.",
+
+    "projects.paysmApp": "Payment App",
+    "projects.paysmAppDesc":
+      "A comprehensive online payment app built with Next.js, focusing on seamless user authentication, secure transactions, and an intuitive user experience.",
 
     "projects.dashboard": "Statistical Data Dashboard",
     "projects.dashboardDesc":
@@ -84,6 +88,14 @@ const translations = {
     "projects.ux": "UX Design: User Experience",
     "projects.uxDesc":
       "Provides problem and solution insights regarding usability testing and a co-purchasing system.",
+
+    "projects.homework": "Homework Management System",
+    "projects.homeworkDesc":
+      "A user-friendly platform designed for children to organize and track their homework, built with Next.js. Features include task scheduling, progress tracking, reminders, and an engaging, easy-to-use interface to make learning fun and interactive.",
+
+    "projects.healthcare": "Smart Health Management System",
+    "projects.healthcareDesc":
+      "A comprehensive health management platform that integrates with smart healthcare devices, helping users track their vital signs, monitor daily habits, and maintain a healthy lifestyle through personalized insights and recommendations.",
 
     // LinkedIn Section
     "linkedin.title": "Connect with Me",
