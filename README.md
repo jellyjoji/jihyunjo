@@ -1,11 +1,15 @@
+# Portfolio
 
-  # Portfolio
+## Hello, I'm Jihyun Jo
 
-  This is a code bundle for Portfolio. The original project is available at https://www.figma.com/design/IJUUyZih6Q61X6wRlHTLBC/Portfolio.
+**Front-End Developer | UX/UI Designer**
 
-  ## Running the code
+Crafting intuitive and engaging digital experiences by bridging design and development. Passionate about clean code, user-centered design, and building products that make a difference.
 
-  Run `npm i` to install the dependencies.
+**Tech Focus:** React.js, Next.js, JavaScript, SCSS, Tailwind CSS, Node.js, REST APIs, Figma, Responsive & Accessible Design
 
-  Run `npm run dev` to start the development server.
-  
+## Getting Started
+
+Run `npm i` to install the dependencies.
+
+Run `npm run dev` to start the development server.
