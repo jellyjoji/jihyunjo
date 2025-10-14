@@ -75,8 +75,8 @@ export function Projects() {
       githubUrl: "https://github.com/jellyjoji/mini-project",
     },
     {
-      title: t("projects.ux"),
-      description: t("projects.uxDesc"),
+      title: t("projects.platform"),
+      description: t("projects.platformDesc"),
       image:
         "https://jellyjo.notion.site/image/https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPyz12%2FbtsudiRXwlu%2FewOdXOsOu45WMp2zwUxx81%2Fimg.png?table=block&id=80460f00-58d6-4727-b27e-03f2de8dace6&spaceId=ddadffc7-7ba1-4929-abc1-abba1179d311&width=1400&userId=&cache=v2",
       tags: [

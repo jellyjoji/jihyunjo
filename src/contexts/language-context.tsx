@@ -85,9 +85,9 @@ const translations = {
     "projects.dashboardDesc":
       "A statistical data dashboard providing table statistics generated from modules in a pipeline built using APIs.",
 
-    "projects.ux": "UX Design: User Experience",
-    "projects.uxDesc":
-      "Provides problem and solution insights regarding usability testing and a co-purchasing system.",
+    "projects.platform": "Co-Purchasing Platform",
+    "projects.platformDesc":
+      "A mobile platform that lets users join and organize co-purchase groups to save on delivery costs. It ensures safe transactions with verified users, transaction history, and nearby meeting information.",
 
     "projects.homework": "Homework Management System",
     "projects.homeworkDesc":
