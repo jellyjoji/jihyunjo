@@ -132,6 +132,15 @@ export function Projects() {
         "https://www.figma.com/proto/pSmT0GvCXghKRVDLGDMCMs/Mediorm?page-id=128%3A4926&node-id=495-6504&viewport=897%2C-1958%2C0.15&t=6cfXrc19yuOHHgrB-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=495%3A6504",
       // githubUrl: "https://github.com/jellyjoji/WeatherApp",
     },
+    {
+      title: t("projects.skinmonitor"),
+      description: t("projects.skinmonitorDesc"),
+      image:
+        "https://github.com/jellyjoji/jihyunjo/raw/main/src/assets/blog-preview.png",
+      tags: ["Python", "AI", "CNN", "RNN", "Node.js", "Figma"],
+      liveUrl: "https://skinmonitor.vercel.app/",
+      githubUrl: "https://github.com/jellyjoji/skinmonitor",
+    },
   ];
 
   return (

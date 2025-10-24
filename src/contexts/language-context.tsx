@@ -96,6 +96,10 @@ const translations = {
     "projects.healthcare": "Smart Health Management System",
     "projects.healthcareDesc":
       "A comprehensive health management platform that integrates with smart healthcare devices, helping users track their vital signs, monitor daily habits, and maintain a healthy lifestyle through personalized insights and recommendations.",
+    "projects.skinmonitor":
+      "AI-Based Artificial Skin Abnormal Reaction Monitoring System",
+    "projects.skinmonitorDesc":
+      "Efficiently and accurately detect abnormal reactions in artificial skin experiments and provide instant alerts.",
 
     // LinkedIn Section
     "linkedin.title": "Connect with Me",
@@ -193,6 +197,9 @@ const translations = {
     "projects.ux": "분석 대시보드",
     "projects.uxDesc":
       "인터랙티브 차트, 실시간 데이터 시각화, 사용자 정의 가능한 보고 기능을 갖춘 포괄적인 분석 대시보드.",
+    "projects.blog": "개인 블로그",
+    "projects.blogDesc":
+      "Gatsby와 React로 구축된 개인 블로그로, 웹 개발, 디자인, 프로젝트 노트에 대한 글을 공유합니다. 마크다운 콘텐츠, SEO 최적화, 반응형 레이아웃을 갖추고 있습니다.",
 
     // LinkedIn Section
     "linkedin.title": "저와 연결하세요",
