@@ -136,7 +136,7 @@ export function Projects() {
       title: t("projects.skinmonitor"),
       description: t("projects.skinmonitorDesc"),
       image:
-        "https://github.com/jellyjoji/jihyunjo/raw/main/src/assets/blog-preview.png",
+        "https://github.com/jellyjoji/jihyunjo/blob/main/src/assets/skinmonitor.png?raw=true",
       tags: ["Python", "AI", "CNN", "RNN", "Node.js", "Figma"],
       liveUrl: "https://skinmonitor.vercel.app/",
       githubUrl: "https://github.com/jellyjoji/skinmonitor",
