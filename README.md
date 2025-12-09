@@ -2,9 +2,9 @@
 
 ## Hello, I'm Jihyun Jo
 
-**Front-End Developer | UX/UI Designer**
+**UX/UI Designer with front-end development experience**
 
-Crafting intuitive and engaging digital experiences by bridging design and development. Passionate about clean code, user-centered design, and building products that make a difference.
+Crafting intuitive and engaging digital experiences by bridging design and engineering. Passionate about user-centered design, accessible interfaces, and shipping maintainable front-end code.
 
 **Tech Focus:** React.js, Next.js, JavaScript, SCSS, Tailwind CSS, Node.js, REST APIs, Figma, Responsive & Accessible Design
 

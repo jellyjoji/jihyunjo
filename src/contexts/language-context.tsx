@@ -31,20 +31,20 @@ const translations = {
     // Hero Section
     "hero.name": "Jihyun Jo",
     "hero.greeting": "Hello, I'm",
-    "hero.title": "Front-end Developer with a foundation in UX/UI Design",
+    "hero.title": "UX/UI Designer with front-end development experience",
     "hero.description":
-      "Building user-focused digital experiences with clean code and clear design.",
+      "Designing user-centered interfaces and implementing them with clean, maintainable front-end code.",
     "hero.contact": "Get In Touch",
     "hero.resume": "Download Resume",
 
     // About Section
     "about.title": "About Me",
     "about.subtitle":
-      "I'm a Front-end Developer with a background in UX/UI Design.",
+      "I'm a UX/UI Designer with front-end development experience.",
     "about.description1":
-      "I love turning clean design concepts into intuitive, responsive interfaces. Here, you'll find a selection of my work — blending creativity, usability, and code.",
+      "I love turning design concepts into intuitive, responsive interfaces and shipping them with maintainable front-end code. Here, you'll find a selection of my work  blending creativity, usability, and engineering.",
     "about.description2":
-      "My main tools and technologies include: Next.js, React.js, JavaScript, Node.js, Figma, and UX/UI Design.",
+      "My main tools and technologies include: Figma, React.js, Next.js, JavaScript, Node.js, and design systems.",
     "about.description3":
       "I enjoy creating fast, accessible, and intuitive interfaces — transforming thoughtful design into functional products.",
     "about.cleanCode": "Clean Code",
