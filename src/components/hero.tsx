@@ -2,9 +2,6 @@ import React from "react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "figma:asset/4e17f810198bb4a2a988d7e9dbc47cab3a8263cd.png";
-// If you add a resume PDF to src/assets/resume.pdf, Vite can import it so it resolves at build time.
-// Put your resume at src/assets/resume.pdf (or update the path below).
-import resumePdf from "../assets/resume.pdf?url";
 import { useLanguage } from "../contexts/language-context";
 
 export function Hero() {
@@ -44,8 +41,12 @@ export function Hero() {
                 </Button>
               </a>
 
-              {/* Download or open resume PDF. Ensure src/assets/resume.pdf exists or update `resumePdf` import above. */}
-              <a href={resumePdf} download className="inline-block">
+              {/* Download resume PDF from public folder */}
+              <a
+                href="/resume.pdf"
+                download="resume.pdf"
+                className="inline-block"
+              >
                 <Button variant="outline" size="lg" className="group">
                   <Download className="w-4 h-4 mr-2" />
                   {t("hero.resume")}
