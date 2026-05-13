@@ -42,25 +42,37 @@ export function Hero() {
               </a>
 
               {/* Download resume PDF from public folder */}
-              <Button
-                variant="outline"
-                size="lg"
-                className="group"
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/resume.pdf";
-                  link.download = "resume.pdf";
-                  link.style.display = "none";
-                  document.body.appendChild(link);
-                  link.click();
-                  setTimeout(() => {
+              <button
+                onClick={async () => {
+                  try {
+                    const response = await fetch("/resume.pdf");
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.download = "Jihyun_Jo_Resume.pdf";
+                    document.body.appendChild(link);
+                    link.click();
                     document.body.removeChild(link);
-                  }, 100);
+                    window.URL.revokeObjectURL(url);
+                  } catch (error) {
+                    console.error("Resume download failed:", error);
+                    // Fallback: direct link
+                    const link = document.createElement("a");
+                    link.href = "/resume.pdf";
+                    link.download = "Jihyun_Jo_Resume.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }
                 }}
+                className="inline-block"
               >
-                <Download className="w-4 h-4 mr-2" />
-                {t("hero.resume")}
-              </Button>
+                <Button variant="outline" size="lg" className="group">
+                  <Download className="w-4 h-4 mr-2" />
+                  {t("hero.resume")}
+                </Button>
+              </button>
             </div>
 
             <div className="flex gap-6 justify-center lg:justify-start">
