@@ -94,8 +94,7 @@ export function Projects() {
         "Prototyping",
         "Design Systems",
       ],
-      liveUrl:
-        "https://jellyjo.notion.site/Portfolio_Jihyun-Jo-28b2643648e280af9d38cd77b0a70a0f",
+      liveUrl: "https://wanduhome.vercel.app/",
       githubUrl: "https://github.com/jellyjoji/ready-act",
     },
     {
