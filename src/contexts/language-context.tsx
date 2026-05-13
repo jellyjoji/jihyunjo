@@ -15,7 +15,7 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 // Translation object
@@ -85,9 +85,9 @@ const translations = {
     "projects.dashboardDesc":
       "A statistical data dashboard providing table statistics generated from modules in a pipeline built using APIs.",
 
-    "projects.platform": "Co-Purchasing Platform",
+    "projects.platform": "Local Community Sharing Platform",
     "projects.platformDesc":
-      "A mobile platform that lets users join and organize co-purchase groups to save on delivery costs. It ensures safe transactions with verified users, transaction history, and nearby meeting information.",
+      "WanduGo is a location-based community platform that builds a circular sharing ecosystem within neighborhoods. Users can freely give, receive, and exchange second-hand items in a safe and trusted environment, supported by verified profiles, transaction history, and nearby meetups. Beyond simple exchanges, WanduGo strengthens ongoing connections between neighbors, creating a continuous loop of sharing, trust, and community growth.",
 
     "projects.homework": "Homework Management System",
     "projects.homeworkDesc":
@@ -200,6 +200,9 @@ const translations = {
     "projects.blog": "개인 블로그",
     "projects.blogDesc":
       "Gatsby와 React로 구축된 개인 블로그로, 웹 개발, 디자인, 프로젝트 노트에 대한 글을 공유합니다. 마크다운 콘텐츠, SEO 최적화, 반응형 레이아웃을 갖추고 있습니다.",
+    "projects.platform": "지역 커뮤니티 공유 플랫폼",
+    "projects.platformDesc":
+      "WanduGo는 위치 기반 커뮤니티 플랫폼으로, 동네 내에서 순환 공유 생태계를 구축합니다. 사용자는 검증된 프로필, 거래 내역, 근처 만남 지원을 통해 안전하고 신뢰할 수 있는 환경에서 중고 물품을 자유롭게 주고받고 교환할 수 있습니다. 단순한 교환을 넘어 WanduGo는 이웃 간 지속적인 연결을 강화하여 공유, 신뢰, 커뮤니티 성장의 지속적인 루프를 만듭니다.",
 
     // LinkedIn Section
     "linkedin.title": "저와 연결하세요",
@@ -266,7 +269,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     (key: string) => {
       return translationMap.get(key) || key;
     },
-    [translationMap]
+    [translationMap],
   );
 
   const contextValue = useMemo(
@@ -275,7 +278,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       setLanguage,
       t,
     }),
-    [language, setLanguage, t]
+    [language, setLanguage, t],
   );
 
   return (
