@@ -42,16 +42,22 @@ export function Hero() {
               </a>
 
               {/* Download resume PDF from public folder */}
-              <a
-                href="/resume.pdf"
-                download="resume.pdf"
-                className="inline-block"
+              <Button
+                variant="outline"
+                size="lg"
+                className="group"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/resume.pdf";
+                  link.download = "resume.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
-                <Button variant="outline" size="lg" className="group">
-                  <Download className="w-4 h-4 mr-2" />
-                  {t("hero.resume")}
-                </Button>
-              </a>
+                <Download className="w-4 h-4 mr-2" />
+                {t("hero.resume")}
+              </Button>
             </div>
 
             <div className="flex gap-6 justify-center lg:justify-start">
