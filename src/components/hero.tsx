@@ -68,7 +68,7 @@ export function Hero() {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/jellyjoji"
+                href="https://linkedin.com/in/jihyunjo"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Linkedin className="w-6 h-6" />

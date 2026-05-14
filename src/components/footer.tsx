@@ -13,7 +13,7 @@ export function Footer() {
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/jellyjoji",
+      href: "https://linkedin.com/in/jihyunjo",
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:joji.the.jungle@gmail.com", label: "Email" },
