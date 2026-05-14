@@ -41,19 +41,15 @@ export function Hero() {
                 </Button>
               </a>
 
-              {/* Download resume PDF from GitHub */}
+              {/* Download resume PDF from public folder */}
               <button
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href =
-                    "https://raw.githubusercontent.com/jellyjoji/jihyunjo/main/public/resume.pdf";
+                  link.href = "/resume.pdf";
                   link.download = "resume.pdf";
-                  link.setAttribute("type", "application/pdf");
                   document.body.appendChild(link);
                   link.click();
-                  setTimeout(() => {
-                    document.body.removeChild(link);
-                  }, 100);
+                  document.body.removeChild(link);
                 }}
                 className="inline-block"
               >
