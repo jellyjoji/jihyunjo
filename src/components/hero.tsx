@@ -41,30 +41,19 @@ export function Hero() {
                 </Button>
               </a>
 
-              {/* Download resume PDF from public folder */}
+              {/* Download resume PDF from GitHub */}
               <button
-                onClick={async () => {
-                  try {
-                    const response = await fetch("/resume.pdf");
-                    const blob = await response.blob();
-                    const url = window.URL.createObjectURL(blob);
-                    const link = document.createElement("a");
-                    link.href = url;
-                    link.download = "Jihyun_Jo_Resume.pdf";
-                    document.body.appendChild(link);
-                    link.click();
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href =
+                    "https://raw.githubusercontent.com/jellyjoji/jihyunjo/main/public/resume.pdf";
+                  link.download = "resume.pdf";
+                  link.setAttribute("type", "application/pdf");
+                  document.body.appendChild(link);
+                  link.click();
+                  setTimeout(() => {
                     document.body.removeChild(link);
-                    window.URL.revokeObjectURL(url);
-                  } catch (error) {
-                    console.error("Resume download failed:", error);
-                    // Fallback: direct link
-                    const link = document.createElement("a");
-                    link.href = "/resume.pdf";
-                    link.download = "Jihyun_Jo_Resume.pdf";
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                  }
+                  }, 100);
                 }}
                 className="inline-block"
               >
