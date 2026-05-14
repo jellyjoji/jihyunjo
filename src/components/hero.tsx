@@ -45,7 +45,10 @@ export function Hero() {
               <button
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/resume.pdf";
+                  link.href = new URL(
+                    "resume.pdf",
+                    window.location.origin,
+                  ).href;
                   link.download = "resume.pdf";
                   document.body.appendChild(link);
                   link.click();
