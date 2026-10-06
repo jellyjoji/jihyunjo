@@ -1,7 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "./ui/button";
-import profileImage from "figma:asset/4e17f810198bb4a2a988d7e9dbc47cab3a8263cd.png";
+import profileImage from "../assets/profile.jpg";
 import { useLanguage } from "../contexts/language-context";
 
 export function Hero() {
@@ -45,10 +45,7 @@ export function Hero() {
               <button
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = new URL(
-                    "resume.pdf",
-                    window.location.origin,
-                  ).href;
+                  link.href = "/resume.pdf";
                   link.download = "resume.pdf";
                   document.body.appendChild(link);
                   link.click();
