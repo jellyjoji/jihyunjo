@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { CircuitBoard, ExternalLink, Github } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -140,6 +140,14 @@ export function Projects() {
       liveUrl: "https://skinmonitor.vercel.app/",
       githubUrl: "https://github.com/jellyjoji/skinmonitor",
     },
+    {
+      title: t("projects.arduino"),
+      description: t("projects.arduinoDesc"),
+      image: null,
+      tags: ["Arduino", "C++", "Embedded Systems", "Electronics"],
+      githubUrl: "https://github.com/jellyjoji/arduino-projects",
+      detailPath: "#arduino-projects",
+    },
   ];
 
   return (
@@ -161,14 +169,40 @@ export function Projects() {
               className="overflow-hidden group hover:shadow-lg transition-shadow duration-300"
             >
               <div className="aspect-video overflow-hidden">
-                <ImageWithFallback
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                {(() => {
+                  const media = project.image ? (
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-muted group-hover:scale-105 transition-transform duration-300">
+                      <CircuitBoard className="w-16 h-16 text-muted-foreground" />
+                    </div>
+                  );
+                  return project.detailPath ? (
+                    <a href={project.detailPath} className="block w-full h-full">
+                      {media}
+                    </a>
+                  ) : (
+                    media
+                  );
+                })()}
               </div>
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+                <CardTitle>
+                  {project.detailPath ? (
+                    <a
+                      href={project.detailPath}
+                      className="hover:text-muted-foreground transition-colors"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
+                </CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -180,26 +214,30 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button size="sm" asChild>
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      {t("projects.liveDemo")}
-                    </a>
-                  </Button>
-                  <Button size="sm" variant="outline" asChild>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      {t("projects.code")}
-                    </a>
-                  </Button>
+                  {project.liveUrl && (
+                    <Button size="sm" asChild>
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        {t("projects.liveDemo")}
+                      </a>
+                    </Button>
+                  )}
+                  {project.githubUrl && (
+                    <Button size="sm" variant="outline" asChild>
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        {t("projects.code")}
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

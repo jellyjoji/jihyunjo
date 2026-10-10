@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Header } from './components/header';
 import { Hero } from './components/hero';
 import { About } from './components/about';
@@ -7,8 +7,22 @@ import { Projects } from './components/projects';
 import { LinkedIn } from './components/linkedin';
 import { Contact } from './components/contact';
 import { Footer } from './components/footer';
+import { ArduinoProjects } from './components/arduino-projects';
+import { JoystickLedMatrix } from './components/joystick-led-matrix';
+import { SmartSafe } from './components/smart-safe';
+import { FlowWave } from './components/flow-wave';
+import { SmartGreenhouse } from './components/smart-greenhouse';
+import { IrTripwire } from './components/ir-tripwire';
+import { TouchSensorPiano } from './components/touch-sensor-piano';
 import { ThemeProvider } from './contexts/theme-context';
 import { LanguageProvider } from './contexts/language-context';
+
+function getRoute() {
+  return window.location.hash.replace(/^#\/?/, '');
+}
+
+// Routes that render as their own standalone page instead of a section on the home page
+const FULL_PAGE_ROUTES = ['arduino-projects', 'joystick-led-matrix', 'smart-safe', 'flow-wave', 'smart-greenhouse', 'ir-tripwire', 'touch-sensor-piano'];
 
 // Loading component
 function LoadingSection() {
@@ -25,6 +39,95 @@ function LoadingSection() {
 }
 
 export default function App() {
+  const [route, setRoute] = useState(getRoute);
+
+  useEffect(() => {
+    const onHashChange = () => setRoute(getRoute());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  // When navigating back to a section (e.g. from a project page), scroll to it
+  useEffect(() => {
+    if (route && !FULL_PAGE_ROUTES.includes(route)) {
+      const id = route;
+      const t = setTimeout(() => {
+        document.querySelector(`#${id}`)?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+      return () => clearTimeout(t);
+    }
+  }, [route]);
+
+  if (route === 'arduino-projects') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <ArduinoProjects />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'joystick-led-matrix') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <JoystickLedMatrix />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'smart-safe') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <SmartSafe />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'flow-wave') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <FlowWave />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'smart-greenhouse') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <SmartGreenhouse />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'ir-tripwire') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <IrTripwire />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'touch-sensor-piano') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <TouchSensorPiano />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       <LanguageProvider>

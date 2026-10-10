@@ -29,8 +29,8 @@ export function Footer() {
             </h3>
             <p className="text-muted-foreground">
               {language === "ko"
-                ? "UX/UI 디자이너 - 프론트엔드 개발 경험"
-                : "UX/UI Designer — Front-end development experience"}
+                ? "IoT 개발자"
+                : "IoT Developer"}
             </p>
           </div>
 
