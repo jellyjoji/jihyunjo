@@ -15,7 +15,7 @@ import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "../contexts/language-context";
 
 const REPO_FOLDER_URL =
-  "https://github.com/jellyjoji/arduino-projects/tree/main/LED_Fighter_v12";
+  "https://github.com/jellyjoji/arduino-projects/tree/main/IR_Flow_Wave_v2";
 const YOUTUBE_VIDEO_ID = "yyTZcTVRLNQ";
 
 export function FlowWave() {

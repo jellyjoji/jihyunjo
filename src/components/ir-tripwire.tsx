@@ -7,7 +7,7 @@ import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "../contexts/language-context";
 
 const REPO_FOLDER_URL =
-  "https://github.com/jellyjoji/arduino-projects/tree/main/ir_tripwire_v1";
+  "https://github.com/jellyjoji/arduino-projects/tree/main/IR_Invisible_Tripwire_v1";
 const YOUTUBE_VIDEO_ID = "WEJk4NfAY6w";
 
 export function IrTripwire() {

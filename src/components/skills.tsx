@@ -7,35 +7,44 @@ export function Skills() {
 
   const skillCategories = [
     {
-      title: t("skills.frontend"),
+      title: t("skills.iot"),
+      emoji: "🔌",
+      skills: [
+        "ESP32",
+        "Arduino",
+        "PlatformIO",
+        "Raspberry Pi",
+        "C / C++",
+        "Sensors & Electronics",
+        "Firmware Development",
+        "Hardware Prototyping",
+      ],
+    },
+    {
+      title: t("skills.software"),
       emoji: "💻",
       skills: [
         "React.js",
         "Next.js",
         "JavaScript",
+        "Node.js",
+        "REST APIs",
+        "HTML/CSS",
         "SCSS",
         "Tailwind CSS",
-        "HTML/CSS",
+        "SQL",
       ],
-    },
-    {
-      title: t("skills.backend"),
-      emoji: "⚙️",
-      skills: ["Node.js", "REST APIs", "SQL"],
     },
     {
       title: t("skills.tools"),
       emoji: "🛠",
-      skills: ["Git", "GitHub", "VS Code", "npm/yarn", "Webpack", "Vite"],
-    },
-    {
-      title: t("skills.design"),
-      emoji: "🎨",
       skills: [
+        "Git / GitHub",
+        "VS Code",
+        "npm/yarn",
+        "Webpack / Vite",
         "Figma",
         "UI/UX Design",
-        "Responsive Design",
-        "Accessibility",
         "Prototyping",
         "Design Systems",
       ],
@@ -54,7 +63,7 @@ export function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={index}

@@ -25,7 +25,7 @@ export function ArduinoProjects() {
 
   const subProjects = [
     {
-      folder: "LED_Fighter_v12",
+      folder: "IR_Flow_Wave_v2",
       title: t("arduino.ledFighter"),
       description: t("arduino.ledFighterDesc"),
       detailPath: "#flow-wave",
@@ -46,21 +46,21 @@ export function ArduinoProjects() {
       youtubeId: "JJAjeC_oZ9g",
     },
     {
-      folder: "smart_greenhouse_v1",
+      folder: "Temp_v1",
       title: t("arduino.smartGreenhouse"),
       description: t("arduino.smartGreenhouseDesc"),
       detailPath: "#smart-greenhouse",
       youtubeId: "WCpTbx90ct8",
     },
     {
-      folder: "ir_tripwire_v1",
+      folder: "IR_Invisible_Tripwire_v1",
       title: t("arduino.irTripwire"),
       description: t("arduino.irTripwireDesc"),
       detailPath: "#ir-tripwire",
       youtubeId: "WEJk4NfAY6w",
     },
     {
-      folder: "touch_sensor_piano_v1",
+      folder: "sensor_piano_v2",
       title: t("arduino.touchSensorPiano"),
       description: t("arduino.touchSensorPianoDesc"),
       detailPath: "#touch-sensor-piano",

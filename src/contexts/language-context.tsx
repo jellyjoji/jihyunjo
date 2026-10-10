@@ -42,11 +42,9 @@ const translations = {
     "about.subtitle":
       "I'm an IoT Developer building connected hardware experiences with a user-centered approach shaped by my UX/UI design background.",
     "about.description1":
-      "I love turning design concepts into intuitive, responsive interfaces and shipping them with maintainable front-end code. Here, you'll find a selection of my work  blending creativity, usability, and engineering.",
-    "about.description2":
-      "My main tools and technologies include: Figma, React.js, Next.js, JavaScript, Node.js, and design systems.",
+      "I love turning ideas into interactive experiences that feel intuitive and responsive, connecting sensors, hardware, and software into systems people can actually touch and feel. Here, you'll find a selection of my work blending physical interaction, usability, and engineering.",
     "about.description3":
-      "I enjoy creating fast, accessible, and intuitive interfaces — transforming thoughtful design into functional products.",
+      "I enjoy crafting experiences where hardware and software work together seamlessly, always starting from the user and transforming concepts into functional, real-world interactions.",
     "about.cleanCode": "Clean Code",
     "about.cleanCodeDesc":
       "Writing maintainable, scalable code that follows best practices and industry standards.",
@@ -61,10 +59,9 @@ const translations = {
     "skills.title": "Skills & Technologies",
     "skills.subtitle":
       "Here are the technologies and tools I work with to bring ideas to life",
-    "skills.frontend": "Frontend",
-    "skills.backend": "Backend",
-    "skills.tools": "Tools & Technologies",
-    "skills.design": "Design",
+    "skills.iot": "IoT & Hardware",
+    "skills.software": "Software & Web",
+    "skills.tools": "Tools & Design",
 
     // Projects Section
     "projects.title": "Featured Projects",
@@ -349,11 +346,9 @@ const translations = {
     "about.subtitle":
       "UX/UI 디자인 경험을 바탕으로 사용자 중심의 접근 방식으로 커넥티드 하드웨어 경험을 만드는 IoT 개발자입니다.",
     "about.description1":
-      "깔끔한 디자인 컨셉을 직관적이고 반응형 인터페이스로 구현하는 것을 즐깁니다. 이 포트폴리오에서는 창의성, 사용성, 코드가 결합된 다양한 작업물을 확인할 수 있습니다.",
-    "about.description2":
-      "주요 기술 및 도구: Next.js, React.js, JavaScript, Node.js, Figma, UX/UI Design",
+      "센서, 하드웨어, 소프트웨어를 연결해 직관적이고 반응성 좋은 인터랙티브 경험으로 구현하는 것을 좋아합니다. 이 포트폴리오에서는 물리적 인터랙션, 사용성, 엔지니어링이 결합된 작업물을 확인할 수 있습니다.",
     "about.description3":
-      "빠르고 접근성 높은 직관적인 인터페이스를 만들며, 사려 깊은 디자인을 기능적인 제품으로 구현합니다.",
+      "하드웨어와 소프트웨어가 매끄럽게 함께 작동하는 경험을 만드는 것을 즐기며, 언제나 사용자로부터 출발해 아이디어를 실제로 작동하는 결과물로 구현합니다.",
     "about.cleanCode": "깨끗한 코드",
     "about.cleanCodeDesc":
       "모범 사례와 업계 표준을 따르는 유지보수 가능하고 확장 가능한 코드 작성.",
@@ -368,10 +363,9 @@ const translations = {
     "skills.title": "스킬 & 기술",
     "skills.subtitle":
       "아이디어를 현실로 만들기 위해 사용하는 기술과 도구들입니다",
-    "skills.frontend": "프론트엔드",
-    "skills.backend": "백엔드",
-    "skills.tools": "도구 & 기술",
-    "skills.design": "디자인",
+    "skills.iot": "IoT & 하드웨어",
+    "skills.software": "소프트웨어 & 웹",
+    "skills.tools": "도구 & 디자인",
 
     // Projects Section
     "projects.title": "주요 프로젝트",

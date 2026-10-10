@@ -42,7 +42,10 @@ export function Hero() {
               </a>
 
               {/* Download resume PDF from public folder */}
-              <button
+              <Button
+                variant="outline"
+                size="lg"
+                className="group"
                 onClick={() => {
                   const link = document.createElement("a");
                   link.href = "/resume.pdf";
@@ -51,13 +54,10 @@ export function Hero() {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="inline-block"
               >
-                <Button variant="outline" size="lg" className="group">
-                  <Download className="w-4 h-4 mr-2" />
-                  {t("hero.resume")}
-                </Button>
-              </button>
+                <Download className="w-4 h-4 mr-2" />
+                {t("hero.resume")}
+              </Button>
             </div>
 
             <div className="flex gap-6 justify-center lg:justify-start">

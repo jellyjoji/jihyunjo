@@ -38,9 +38,6 @@ export function About() {
             <p className="text-muted-foreground mb-6">
               {t('about.description1')}
             </p>
-            <p className="text-muted-foreground mb-6">
-              {t('about.description2')}
-            </p>
             <p className="text-muted-foreground">
               {t('about.description3')}
             </p>

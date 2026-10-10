@@ -15,7 +15,7 @@ import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "../contexts/language-context";
 
 const REPO_FOLDER_URL =
-  "https://github.com/jellyjoji/arduino-projects/tree/main/touch_sensor_piano_v1";
+  "https://github.com/jellyjoji/arduino-projects/tree/main/sensor_piano_v2";
 const YOUTUBE_VIDEO_ID = "MSR-9B4umzM";
 
 export function TouchSensorPiano() {

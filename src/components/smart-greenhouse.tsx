@@ -7,7 +7,7 @@ import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "../contexts/language-context";
 
 const REPO_FOLDER_URL =
-  "https://github.com/jellyjoji/arduino-projects/tree/main/smart_greenhouse_v1";
+  "https://github.com/jellyjoji/arduino-projects/tree/main/Temp_v1";
 const YOUTUBE_VIDEO_ID = "WCpTbx90ct8";
 
 export function SmartGreenhouse() {
