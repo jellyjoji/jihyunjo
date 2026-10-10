@@ -17,6 +17,15 @@ export function Projects() {
 
   const projects = [
     {
+      title: t("projects.arduino"),
+      description: t("projects.arduinoDesc"),
+      image:
+        "https://images.unsplash.com/photo-1631378297854-185cff6b0986?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+      tags: ["Arduino", "C++", "Embedded Systems", "Electronics"],
+      githubUrl: "https://github.com/jellyjoji/arduino-projects",
+      detailPath: "#arduino-projects",
+    },
+    {
       title: t("projects.paysm"),
       description: t("projects.paysmDesc"),
       image:
@@ -139,14 +148,6 @@ export function Projects() {
       tags: ["Python", "AI", "CNN", "RNN", "Node.js", "Figma"],
       liveUrl: "https://skinmonitor.vercel.app/",
       githubUrl: "https://github.com/jellyjoji/skinmonitor",
-    },
-    {
-      title: t("projects.arduino"),
-      description: t("projects.arduinoDesc"),
-      image: null,
-      tags: ["Arduino", "C++", "Embedded Systems", "Electronics"],
-      githubUrl: "https://github.com/jellyjoji/arduino-projects",
-      detailPath: "#arduino-projects",
     },
   ];
 

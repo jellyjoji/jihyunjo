@@ -103,7 +103,7 @@ const translations = {
 
     "projects.arduino": "Arduino Projects Collection",
     "projects.arduinoDesc":
-      "A collection of 6 Arduino hardware projects: FLOW / WAVE, a proximity-reactive light and wave installation; JOYSTICK LED MATRIX, a joystick-based controller; Smart Safe, a digital door lock; Smart Greenhouse, a temperature and humidity monitoring prototype; IR Invisible Tripwire, an infrared beam-break alarm prototype; and Touch Sensor Piano, a capacitive-touch piano with sound and light feedback.",
+      "6 hardware projects built with Arduino, each exploring a different combination of sensors, actuators, and real-time control.",
 
     // Arduino Projects Detail Page
     "arduino.back": "Back to Projects",

@@ -16,7 +16,7 @@ import { useLanguage } from "../contexts/language-context";
 
 const REPO_FOLDER_URL =
   "https://github.com/jellyjoji/arduino-projects/tree/main/LED_Fighter_v12";
-const YOUTUBE_VIDEO_ID = "zFAX9xJCNcM";
+const YOUTUBE_VIDEO_ID = "yyTZcTVRLNQ";
 
 export function FlowWave() {
   const { t, language } = useLanguage();

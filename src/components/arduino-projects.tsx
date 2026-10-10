@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { ArrowLeft, CircuitBoard, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Play } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -29,36 +29,42 @@ export function ArduinoProjects() {
       title: t("arduino.ledFighter"),
       description: t("arduino.ledFighterDesc"),
       detailPath: "#flow-wave",
+      youtubeId: "yyTZcTVRLNQ",
     },
     {
       folder: "LED_Joystick_v1",
       title: t("arduino.ledJoystick"),
       description: t("arduino.ledJoystickDesc"),
       detailPath: "#joystick-led-matrix",
+      youtubeId: "nqIoczHSWbs",
     },
     {
       folder: "Locker_v1",
       title: t("arduino.locker"),
       description: t("arduino.lockerDesc"),
       detailPath: "#smart-safe",
+      youtubeId: "JJAjeC_oZ9g",
     },
     {
       folder: "smart_greenhouse_v1",
       title: t("arduino.smartGreenhouse"),
       description: t("arduino.smartGreenhouseDesc"),
       detailPath: "#smart-greenhouse",
+      youtubeId: "WCpTbx90ct8",
     },
     {
       folder: "ir_tripwire_v1",
       title: t("arduino.irTripwire"),
       description: t("arduino.irTripwireDesc"),
       detailPath: "#ir-tripwire",
+      youtubeId: "WEJk4NfAY6w",
     },
     {
       folder: "touch_sensor_piano_v1",
       title: t("arduino.touchSensorPiano"),
       description: t("arduino.touchSensorPianoDesc"),
       detailPath: "#touch-sensor-piano",
+      youtubeId: "MSR-9B4umzM",
     },
   ];
 
@@ -113,18 +119,22 @@ export function ArduinoProjects() {
                   key={project.folder}
                   className="overflow-hidden group hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="aspect-video overflow-hidden flex items-center justify-center bg-muted">
-                    {project.detailPath ? (
-                      <a
-                        href={project.detailPath}
-                        className="flex items-center justify-center w-full h-full"
-                      >
-                        <CircuitBoard className="w-16 h-16 text-muted-foreground group-hover:scale-105 transition-transform duration-300" />
-                      </a>
-                    ) : (
-                      <CircuitBoard className="w-16 h-16 text-muted-foreground group-hover:scale-105 transition-transform duration-300" />
-                    )}
-                  </div>
+                  <a
+                    href={project.detailPath || `${REPO_URL}/tree/main/${project.folder}`}
+                    className="relative aspect-video overflow-hidden flex items-center justify-center bg-black block"
+                  >
+                    <img
+                      src={`https://img.youtube.com/vi/${project.youtubeId}/hqdefault.jpg`}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="flex items-center justify-center w-14 h-10 rounded-lg bg-[#ff0000]/90 group-hover:bg-[#ff0000] transition-colors duration-300">
+                        <Play className="w-6 h-6 text-white fill-white ml-0.5" />
+                      </div>
+                    </div>
+                  </a>
                   <CardHeader>
                     <CardTitle>
                       {project.detailPath ? (
