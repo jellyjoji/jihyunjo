@@ -1,7 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "./ui/button";
-import profileImage from "../assets/profile.jpg";
+import profileImage from "../assets/profile.png";
 import { useLanguage } from "../contexts/language-context";
 
 export function Hero() {

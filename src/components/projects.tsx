@@ -26,6 +26,20 @@ export function Projects() {
       detailPath: "#arduino-projects",
     },
     {
+      title: t("projects.carTrail"),
+      description: t("projects.carTrailDesc"),
+      image: "https://img.youtube.com/vi/ZJvtSHlx4-Q/hqdefault.jpg",
+      tags: [
+        "Python",
+        "OpenCV",
+        "Computer Vision",
+        "Depth Camera",
+        "Projection Mapping",
+      ],
+      liveUrl: "https://youtu.be/ZJvtSHlx4-Q",
+      detailPath: "#car-trail",
+    },
+    {
       title: t("projects.paysm"),
       description: t("projects.paysmDesc"),
       image:
@@ -40,7 +54,7 @@ export function Projects() {
         "UI/UX Design",
         "Responsive Design",
       ],
-      liveUrl: "https://www.paysm.net",
+      liveUrl: "https://paysm.vercel.app/",
       githubUrl: "https://github.com/jellyjoji/paysm.net",
     },
     {

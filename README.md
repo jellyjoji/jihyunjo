@@ -2,14 +2,6 @@
 
 ## Hello, I'm Jihyun Jo
 
-**UX/UI Designer with front-end development experience**
+**Hello. I'm an IoT Developer** who connects hardware and software to create interactive experiences. With a background in UX/UI and front-end development, I build systems that people can actually touch and feel, blending physical interaction, usability, and engineering.
 
-Crafting intuitive and engaging digital experiences by bridging design and engineering. Passionate about user-centered design, accessible interfaces, and shipping maintainable front-end code.
-
-**Tech Focus:** React.js, Next.js, JavaScript, SCSS, Tailwind CSS, Node.js, REST APIs, Figma, Responsive & Accessible Design
-
-## Getting Started
-
-Run `npm i` to install the dependencies.
-
-Run `npm run dev` to start the development server.
+**Tech Focus:** ESP32, Arduino, PlatformIO, C/C++, React.js, Next.js, JavaScript, Node.js, REST APIs, Figma

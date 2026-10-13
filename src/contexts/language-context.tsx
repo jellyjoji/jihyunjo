@@ -102,6 +102,38 @@ const translations = {
     "projects.arduinoDesc":
       "6 hardware projects built with Arduino, each exploring a different combination of sensors, actuators, and real-time control.",
 
+    "projects.carTrail": "Car Tracking Motion Trail",
+    "projects.carTrailDesc":
+      "A depth camera tracks a toy/RC car driven over a floor projection, and the projector draws its path in real time: a glowing ribbon, sparks, and drifting colored particles. Multiple cars each get their own ID and color, while the car itself stays dark.",
+
+    // Car Trail Detail Page
+    "carTrail.back": "Back to Projects",
+    "carTrail.title": "Car Tracking Motion Trail",
+    "carTrail.subtitle":
+      "A toy car leaves light, fire, and particles behind it",
+    "carTrail.intro":
+      "A toy or RC car driven over a floor projection is tracked by a depth camera, and the projector draws its path back onto the floor: a glowing ribbon, sparks off the back, and colored particles drifting away. Several cars can be tracked at once, each with its own ID and color, while the car itself is kept dark so only the light trail shows.",
+    "carTrail.videoHeading": "Project Video",
+    "carTrail.conceptHeading": "Concept",
+    "carTrail.conceptBody":
+      "Car trail turns a toy car into a paintbrush of light. As it moves across the floor, the projector lays a trail of effects behind it — a glowing ribbon, fire-like sparks that cool from white to red, and particles that drift off the path — while keeping the car itself unlit so attention stays on the trail. It reuses this installation's own floor registration (homography), the depth-mask chain from the collision room, and the slider-panel code from the static-mask room rather than building new versions of each.",
+    "carTrail.pipelineHeading": "How It Works — Per Frame",
+    "carTrail.implementationHeading": "Implementation Details",
+    "carTrail.runHeading": "Running It",
+    "carTrail.controlsHeading": "Controls",
+    "carTrail.controlsKey": "Key",
+    "carTrail.controlsAction": "Action",
+    "carTrail.settingsHeading": "Settings Panel",
+    "carTrail.settingsSlider": "Slider",
+    "carTrail.settingsDefault": "Default",
+    "carTrail.settingsNote": "Note",
+    "carTrail.filesHeading": "Files",
+    "carTrail.filesFile": "File",
+    "carTrail.filesWhat": "What",
+    "carTrail.limitsHeading": "Limits",
+    "carTrail.footerNote":
+      "Sizing a car: on the floor setup (camera ~1.3m up) a 20 × 10cm car is roughly 3000–4000 camera pixels. The camera window prints each car's size next to it.",
+
     // Arduino Projects Detail Page
     "arduino.back": "Back to Projects",
     "arduino.pageTitle": "Arduino Projects Collection",
@@ -397,6 +429,37 @@ const translations = {
     "projects.arduino": "아두이노 프로젝트 모음",
     "projects.arduinoDesc":
       "6개의 아두이노 하드웨어 프로젝트 모음입니다: 근접 반응형 빛과 파장 설치물 FLOW / WAVE, 조이스틱 컨트롤러 JOYSTICK LED MATRIX, 디지털 도어락 Smart Safe, 온습도 모니터링 프로토타입 Smart Greenhouse, 적외선 빔 차단 경보 프로토타입 IR Invisible Tripwire, 터치 기반 인터랙티브 피아노 Touch Sensor Piano.",
+
+    "projects.carTrail": "자동차 추적 모션 트레일",
+    "projects.carTrailDesc":
+      "깊이 카메라가 바닥 영상 위를 달리는 장난감/RC 자동차를 추적하고, 프로젝터가 실시간으로 빛나는 리본, 불꽃, 떠다니는 색 입자로 이동 경로를 그려냅니다. 여러 대의 자동차는 각각 고유한 ID와 색상을 가지며, 자동차 자체는 어둡게 유지됩니다.",
+
+    // Car Trail Detail Page
+    "carTrail.back": "프로젝트로 돌아가기",
+    "carTrail.title": "자동차 추적 모션 트레일",
+    "carTrail.subtitle": "장난감 자동차가 지나간 자리에 빛과 불꽃, 입자가 남는다",
+    "carTrail.intro":
+      "바닥 영상 위를 달리는 장난감 또는 RC 자동차를 깊이 카메라가 추적하고, 프로젝터는 그 경로를 바닥에 다시 그려낸다 — 빛나는 리본, 뒤쪽에서 튀는 스파크, 멀어지며 흩어지는 색 입자. 여러 대의 자동차를 동시에 추적할 수 있고 각각 고유한 ID와 색상을 가지며, 자동차 자체는 어둡게 유지되어 빛의 흔적만 눈에 들어온다.",
+    "carTrail.videoHeading": "프로젝트 영상",
+    "carTrail.conceptHeading": "컨셉",
+    "carTrail.conceptBody":
+      "Car trail은 장난감 자동차를 빛의 붓으로 만든다. 자동차가 바닥을 지나가면 프로젝터가 그 뒤로 빛나는 리본, 흰색에서 빨간색으로 식어가는 불꽃 같은 스파크, 경로에서 흩어지는 입자를 남기고, 자동차 자체는 빛나지 않게 유지해 시선이 트레일에 머물도록 한다. 이 설치의 바닥 registration(homography), 충돌 감지 룸의 깊이 마스크 체인, static-mask 룸의 슬라이더 패널 코드를 각각 새로 만들지 않고 그대로 재사용한다.",
+    "carTrail.pipelineHeading": "동작 방식 — 프레임별",
+    "carTrail.implementationHeading": "구현 세부사항",
+    "carTrail.runHeading": "실행 방법",
+    "carTrail.controlsHeading": "조작키",
+    "carTrail.controlsKey": "키",
+    "carTrail.controlsAction": "동작",
+    "carTrail.settingsHeading": "설정 패널",
+    "carTrail.settingsSlider": "슬라이더",
+    "carTrail.settingsDefault": "기본값",
+    "carTrail.settingsNote": "설명",
+    "carTrail.filesHeading": "파일",
+    "carTrail.filesFile": "파일",
+    "carTrail.filesWhat": "내용",
+    "carTrail.limitsHeading": "한계",
+    "carTrail.footerNote":
+      "자동차 크기 기준: 바닥 설치 기준(카메라 높이 약 1.3m)에서 20 × 10cm 자동차는 약 3000–4000 카메라 픽셀에 해당한다. 카메라 창에는 각 자동차 옆에 크기가 함께 표시된다.",
 
     // Arduino Projects Detail Page
     "arduino.back": "프로젝트로 돌아가기",

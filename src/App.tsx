@@ -14,6 +14,7 @@ import { FlowWave } from './components/flow-wave';
 import { SmartGreenhouse } from './components/smart-greenhouse';
 import { IrTripwire } from './components/ir-tripwire';
 import { TouchSensorPiano } from './components/touch-sensor-piano';
+import { CarTrail } from './components/car-trail';
 import { ThemeProvider } from './contexts/theme-context';
 import { LanguageProvider } from './contexts/language-context';
 
@@ -22,7 +23,7 @@ function getRoute() {
 }
 
 // Routes that render as their own standalone page instead of a section on the home page
-const FULL_PAGE_ROUTES = ['arduino-projects', 'joystick-led-matrix', 'smart-safe', 'flow-wave', 'smart-greenhouse', 'ir-tripwire', 'touch-sensor-piano'];
+const FULL_PAGE_ROUTES = ['arduino-projects', 'joystick-led-matrix', 'smart-safe', 'flow-wave', 'smart-greenhouse', 'ir-tripwire', 'touch-sensor-piano', 'car-trail'];
 
 // Loading component
 function LoadingSection() {
@@ -123,6 +124,16 @@ export default function App() {
       <ThemeProvider>
         <LanguageProvider>
           <TouchSensorPiano />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  if (route === 'car-trail') {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <CarTrail />
         </LanguageProvider>
       </ThemeProvider>
     );
