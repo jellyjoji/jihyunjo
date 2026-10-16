@@ -13,7 +13,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { LanguageSelector } from "./language-selector";
 import { useLanguage } from "../contexts/language-context";
 
-const YOUTUBE_VIDEO_ID = "ZJvtSHlx4-Q";
+const YOUTUBE_VIDEO_ID = "upB4rKmVJ3o";
 
 export function CarTrail() {
   const { t, language } = useLanguage();

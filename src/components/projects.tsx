@@ -28,7 +28,7 @@ export function Projects() {
     {
       title: t("projects.carTrail"),
       description: t("projects.carTrailDesc"),
-      image: "https://img.youtube.com/vi/ZJvtSHlx4-Q/hqdefault.jpg",
+      image: "https://img.youtube.com/vi/upB4rKmVJ3o/hqdefault.jpg",
       tags: [
         "Python",
         "OpenCV",
@@ -36,7 +36,7 @@ export function Projects() {
         "Depth Camera",
         "Projection Mapping",
       ],
-      liveUrl: "https://youtu.be/ZJvtSHlx4-Q",
+      liveUrl: "https://youtu.be/upB4rKmVJ3o",
       detailPath: "#car-trail",
     },
     {
